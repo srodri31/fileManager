@@ -1,0 +1,14 @@
+<h1>This is me</h1>
+<p><%= @message %></p>
+
+<%= form_with(url: "/create/file", method: "post") do %>
+    <div>
+        <%= label_tag :file_name, "File name" %>
+        <%= text_field_tag :file_name %>
+    </div>
+    <div>
+        <%= label_tag :content, "Content" %>
+        <%= text_field_tag :content %>
+    </div>
+    <%= submit_tag "Crear" %>
+<% end %>
